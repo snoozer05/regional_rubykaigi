@@ -76,6 +76,15 @@ div.event_index h2 {
 	color: #666;
 }
 
+div.event_index h3 {
+	font-size: 16px;
+	margin-top: 10px
+	margin-left: 2em;
+	padding: 3px;
+	color: #666;
+}
+
+
 div.event_index ul {
 	margin-left: 2em;
 }
@@ -88,4 +97,26 @@ div.event_index li {
 div.event_index li span.event_name {
 	font-size: 20px;
 	font-weight: bold;
+}
+
+div.epigraph {
+	margin: 1em 3em;
+	padding: 0 4em;
+	color: #666;
+	font-size: 18px;
+	font-style: italic;
+}
+
+div.source {
+	font-size: 16px;
+	margin-top: 5px;
+	padding-left: 2em;
+}
+
+div.registration_link {
+  margin-left: 2em;
+}
+
+div.registration_link {
+  margin-left: 2em;
 }
