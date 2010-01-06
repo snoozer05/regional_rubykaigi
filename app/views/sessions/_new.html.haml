@@ -1,0 +1,12 @@
+%h1 Log In
+%p (アカウントがあらかじめ存在していないとログインできません)
+
+- form_tag :controller => 'sessions', :action => 'create' do
+  %p
+    %label{:for => "openid_identifier"} OpenID:
+    = text_field_tag "openid_identifier", @openid_identifier, :size => 50
+    = submit_tag 'Log in'
+
+= link_to('googleアカウントでログイン', {:controller => 'sessions', :action => 'create', :openid_identifier => 'https://www.google.com/accounts/o8/id'}, :method => 'post')
+%br
+= link_to('mixiアカウントでログイン', {:controller => 'sessions', :action => 'create', :openid_identifier => 'https://mixi.jp'}, :method => 'post')

@@ -49,15 +49,18 @@ namespace :deploy do
     setup_shared("db", "production.sqlite3")
     setup_shared_config("config_action_controller_session.rb")
     setup_shared_config("initializers/site_keys.rb")
+    setup_shared_config("initializers/app_config.rb")
   end
 
-  desc "resart for our application"
-  task :restart, :roles => :app, :except => { :no_release => true } do |t|
-    stop
-    start
+  desc "Restart Passenger"
+  task :restart do
+    run "touch #{latest_release}/tmp/restart.txt"
   end
 
-  task :after_restart do
-    notify_irc_cat
+  task :stop, :roles => :app do
   end
+
+#  task :after_restart do
+#    notify_irc_cat
+#  end
 end
